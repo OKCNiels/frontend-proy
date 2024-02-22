@@ -1,10 +1,10 @@
 // import './js/ejemplo.js'
-import {ejemplo} from "./js/ejemplo.js";
+// import {ejemplo} from "./js/ejemplo.js";
 
 const AboutMe = () => {
 
-  const click = (  ) => {
-    console.log(ejemplo);
+  const click = () => {
+    // console.log(ejemplo('w'));
     
   }
   return (

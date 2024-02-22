@@ -1,7 +1,4 @@
 
-
-const ejemplo = () => {
-  return console.log('ss');
+export const ejemplo = (data) => {
+  return data;
 }
-
-export default ejemplo
