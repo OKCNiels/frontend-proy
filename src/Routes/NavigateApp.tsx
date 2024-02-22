@@ -7,9 +7,9 @@ const NavigateApp = () => {
     const [token, setToken] = useLocalStorage("token");
     const navigate = useNavigate();
     const sessionFinalizada = async () => {
-              
-        
         await finalizar(token);
+        localStorage.removeItem('usuario');
+        localStorage.removeItem('token');
         navigate('/login');
         // setUser(response.data.data);
         

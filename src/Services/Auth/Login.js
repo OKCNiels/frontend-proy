@@ -13,13 +13,14 @@ export const iniciarSession = async (data) => {
 
 export const finalizar = async (token) => {
     
-    const headers = {
-        headers: { "Authorization": "Bearer "+token },
-    };
-    return await axios.get(API_URL+'/logout',headers).then(response => {
-        localStorage.removeItem('usuario');
-        localStorage.removeItem('token');
-    }).catch(error => {
-        console.log(error);
-    });
+    try {
+        const headers = {
+            headers: { "Authorization": "Bearer "+token },
+        };
+        return await axios.get(API_URL+'/logout',headers);
+    } catch (error) {
+        console.log('No se pudo procesar',error.message);
+    }
+
+    
 }
