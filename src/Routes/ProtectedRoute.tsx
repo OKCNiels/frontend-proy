@@ -4,8 +4,6 @@ import { useLocalStorage } from "react-use"
 
 const ProtectedRoute = ({ redirectPath = '/login' }) => {
 
-
-    // const [first, setfirst] = useState(localStorage.getItem("user"));
     const [first, setfirst] = useLocalStorage("usuario");
 
     if (!first) {

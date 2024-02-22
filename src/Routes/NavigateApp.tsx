@@ -6,6 +6,7 @@ import { useLocalStorage } from "react-use"
 const NavigateApp = () => {
     const [token, setToken] = useLocalStorage("token");
     const navigate = useNavigate();
+    
     const sessionFinalizada = async () => {
         await finalizar(token);
         localStorage.removeItem('usuario');

@@ -5,8 +5,6 @@ import AboutMe from '../Pages/AboutMe'
 import Profile from '../Pages/Profile'
 import Error404 from '../Pages/Error/Error404'
 import NavigateApp from './NavigateApp'
-// import NavigateAPP from '../Components/NavigateApp'
-
 
 const RouterApp = () => {
   return (
