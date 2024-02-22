@@ -1,14 +1,18 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { iniciarSession } from "../Services/Auth/Login";
 
 const Login = () => {
 
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
 
-    const onSubmit = ( data ) => {
-        console.log(data);
-        localStorage.setItem('user', JSON.stringify(data));
+
+    const onSubmit = async( data ) => {
+        let response = await iniciarSession(data);
+        console.log(response.data);
+        localStorage.setItem('usuario', JSON.stringify(response.data.usuario));
+        localStorage.setItem('token', JSON.stringify(response.data.token));
         navigate('/about-me')
     }
   return (
