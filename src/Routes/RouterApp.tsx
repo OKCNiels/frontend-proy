@@ -9,6 +9,7 @@ import NavigateApp from './NavigateApp'
 const RouterApp = () => {
   return (
     <>
+      
         <NavigateApp></NavigateApp>
         <Routes>
             <Route element={<ProtectedRoute  />}>
